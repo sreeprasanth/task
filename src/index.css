@@ -1,3 +1,11 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import "primereact/resources/primereact.min.css";
+@import "primereact/resources/themes/tailwind-light/theme.css";
+@import "primeicons/primeicons.css";
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -10,4 +18,22 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+@layer utilities {
+  body {
+    @apply bg-black;
+    padding: 50px;
+ 
+  }
+
+
+}
+
+.rotate-container {
+  transition: transform 1s ease-in-out; /* Use transition for smoother rotation */
+  transform-origin: center;
+}
+
+.rotate {
+  transform: rotate(360deg);
 }
